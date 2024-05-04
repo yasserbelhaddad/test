@@ -34,4 +34,5 @@ def predict(request):
     prediction = model.predict(features_df)
     
     # Return prediction as JSON response
-    return Response({'features_array': features,'prediction':prediction})
+    # return Response({'features_array': features,'prediction':prediction})
+    return render(request, 'prediction.html', {'prediction': prediction})
