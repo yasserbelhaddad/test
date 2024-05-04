@@ -8,7 +8,7 @@ from rest_framework.response import Response
 import joblib
 import pandas as pd
 
-@api_view(['GET'])
+@api_view(['POST'])
 def predict(request):
     # Load the saved model
     model = joblib.load('api/models/modell.pkl')
